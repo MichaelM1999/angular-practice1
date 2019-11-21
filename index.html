@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.js"></script>
+</head>
+<body ng-app="ToDoList">
+    <div ng-controller="MainController">
+        <!-- <li>{{ list[0] }}</li>
+        <li>{{ list[1] }}</li>
+        <li>{{ list[2] }}</li> -->
+        <div ng-repeat="item in list">
+            <li> {{ item }}</li>
+        </div>
+        <input ng-model="addToDo">
+        <button ng-click="addItem()">Add this TO-do</button>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js/controller.js"></script>
+</body>
+</html>
