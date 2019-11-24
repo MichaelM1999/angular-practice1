@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
 </head>
 <body ng-app="ToDoList">
     <!-- To-Do -->
-    <div ng-controller="MainController">
+    <div ng-controller="MainController" class="col">
+        <h1>To-Do's</h1>
         <div ng-repeat="item in list">
-            <li> {{ item }}</li>
+            <li> {{ item }} <button ng-click="removeTodo">Done</button></li>
         </div>
         <input ng-model="addToDo">
         <button ng-click="addItem()">Add this TO-do</button>
 
     </div>
     <!-- bills -->
-    <div ng-controller="MainController">
+    <div ng-controller="MainController" class="col">
+        <h1>Bills</h1>
         <div ng-repeat="item in bills">
-            <li>{{item.name}} {{item.ammount}}</li>
+            <li>{{item.name}} {{item.ammount}}<button ng-click="removeBill">Paid</button></li></li>
         </div>
         <input ng-model="billName" placeholder="Name of bill"> 
         <input ng-model="billAmmount" placeholder="$100">
